@@ -1,0 +1,88 @@
+{
+  "name": "Blotato connection health check",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": { "interval": [{ "field": "hours", "hoursInterval": 24 }] }
+      },
+      "id": "a1",
+      "name": "Every day",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "url": "https://backend.blotato.com/v2/users/me/accounts",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [{ "name": "blotato-api-key", "value": "={{ $env.BLOTATO_API_KEY }}" }] },
+        "options": {}
+      },
+      "id": "a2",
+      "name": "List connected accounts",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [220, 0]
+    },
+    {
+      "parameters": { "fieldToSplitOut": "items", "options": {} },
+      "id": "a3",
+      "name": "One item per account",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [440, 0]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            { "id": "c1", "leftValue": "={{ ['facebook','linkedin'].includes($json.platform) }}", "rightValue": true, "operator": { "type": "boolean", "operation": "true", "singleValue": true } }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a4",
+      "name": "Facebook or LinkedIn only",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2,
+      "position": [660, 0]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.blotato.com/v2/users/me/accounts/{{ $json.id }}/subaccounts",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [{ "name": "blotato-api-key", "value": "={{ $env.BLOTATO_API_KEY }}" }] },
+        "options": {
+          "batching": { "batch": { "batchSize": 1, "batchInterval": 2500 } },
+          "response": { "response": { "fullResponse": true, "neverError": true } }
+        }
+      },
+      "id": "a5",
+      "name": "Check pages (2.5s apart, under the rate limit)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [880, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Keep only broken connections and write the message a customer would get.\nconst accounts = $('Facebook or LinkedIn only').all();\nreturn $input.all().flatMap((item, i) => {\n  const code = item.json.statusCode;\n  if (code === 200) return [];\n  const a = accounts[i]?.json ?? {};\n  const why = code === 422 ? 'The connection expired. Reconnect it in Blotato settings.' : code === 404 ? 'Blotato no longer finds this account. Reconnect it.' : `Unexpected HTTP ${code}. Escalate with this time and account id.`;\n  return [{ json: { platform: a.platform, account: a.username ?? a.fullname ?? a.id, statusCode: code, action: why } }];\n});"
+      },
+      "id": "a6",
+      "name": "Broken connections only",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1100, 0]
+    }
+  ],
+  "connections": {
+    "Every day": { "main": [[{ "node": "List connected accounts", "type": "main", "index": 0 }]] },
+    "List connected accounts": { "main": [[{ "node": "One item per account", "type": "main", "index": 0 }]] },
+    "One item per account": { "main": [[{ "node": "Facebook or LinkedIn only", "type": "main", "index": 0 }]] },
+    "Facebook or LinkedIn only": { "main": [[{ "node": "Check pages (2.5s apart, under the rate limit)", "type": "main", "index": 0 }]] },
+    "Check pages (2.5s apart, under the rate limit)": { "main": [[{ "node": "Broken connections only", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "pinData": {}
+}

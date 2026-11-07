@@ -1,0 +1,14 @@
+{
+  "post": {
+    "accountId": "98432",
+    "content": {
+      "text": "This will go live later",
+      "mediaUrls": [],
+      "platform": "twitter"
+    },
+    "target": {
+      "targetType": "twitter"
+    }
+  },
+  "scheduledTime": "2026-12-25T15:00:00Z"
+}

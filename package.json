@@ -1,0 +1,28 @@
+{
+  "name": "blotato-support-copilot",
+  "version": "0.1.0",
+  "description": "A support engineer's copilot for the Blotato API: diagnose a customer's setup, catch bad post payloads before they fail, and explain errors in plain words. Ships as a CLI and an MCP server.",
+  "type": "module",
+  "bin": {
+    "blotato-copilot": "dist/src/cli.js",
+    "blotato-copilot-mcp": "dist/src/mcp.js"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "mcp": "node dist/src/mcp.js",
+    "mock": "node dist/src/mock-server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

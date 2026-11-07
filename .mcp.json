@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "blotato": {
+      "type": "http",
+      "url": "https://mcp.blotato.com/mcp",
+      "headers": {
+        "blotato-api-key": "${BLOTATO_API_KEY}"
+      }
+    },
+    "blotato-support-copilot": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["dist/src/mcp.js"],
+      "env": {
+        "BLOTATO_API_KEY": "${BLOTATO_API_KEY}"
+      }
+    }
+  }
+}
