@@ -14,6 +14,7 @@ import { BlotatoClient } from "./blotato.js";
 import { runDoctor, formatReport } from "./doctor.js";
 import { validatePost, summarize } from "./validate.js";
 import { explainError } from "./explain.js";
+import { reviewReply } from "./review.js";
 
 const server = new McpServer({ name: "blotato-support-copilot", version: "0.1.0" });
 
@@ -42,6 +43,19 @@ server.tool(
     }
     return text(summarize(validatePost(parsed)));
   },
+);
+
+server.tool(
+  "blotato_gate_reply",
+  "Check a drafted customer reply with 10 yes/no checks (correct fix, no wrong fix, no false facts, no promises, escalation, action, specifics, no blame, length, next step). send=true only if all 4 critical checks pass, the score is 9 or 10, and the reply is the copilot's built-in reply or the AI judge (judge: \"api\") passes it. Otherwise lists what to fix or hands it to a person.",
+  {
+    reply: z.string().describe("The drafted reply to the customer."),
+    status: z.number().optional().describe("HTTP status of the customer's error, if known."),
+    issue: z.string().optional().describe("The customer's message or error text, so the gate knows the likely cause."),
+    judge: z.enum(["api", "off"]).default("off").describe("api = also run the AI judge on a free-form draft (needs ANTHROPIC_API_KEY)."),
+  },
+  async ({ reply, status, issue, judge }) =>
+    text(JSON.stringify(await reviewReply(reply, { status, message: issue }, { judge }), null, 2)),
 );
 
 server.tool(
