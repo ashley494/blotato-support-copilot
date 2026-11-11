@@ -1,0 +1,808 @@
+{
+  "real": {
+    "cases": 48,
+    "top1": 15,
+    "top3": 15,
+    "gatePass": 15,
+    "results": [
+      {
+        "id": "rt-01",
+        "expectedId": "billing-trial-api-key",
+        "got": "billing-trial-api-key",
+        "top3": [
+          "billing-trial-api-key",
+          "plan-403"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 9.7,
+        "gatePass": true,
+        "gateToFix": [
+          "End with the next step or a question."
+        ]
+      },
+      {
+        "id": "rt-02",
+        "expectedId": "billing-trial-api-key",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-03",
+        "expectedId": "billing-trial-api-key",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-04",
+        "expectedId": "billing-trial-api-key",
+        "got": "billing-trial-api-key",
+        "top3": [
+          "billing-trial-api-key"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 9.7,
+        "gatePass": true,
+        "gateToFix": [
+          "End with the next step or a question."
+        ]
+      },
+      {
+        "id": "rt-05",
+        "expectedId": "billing-trial-api-key",
+        "got": "billing-trial-api-key",
+        "top3": [
+          "billing-trial-api-key"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 9.7,
+        "gatePass": true,
+        "gateToFix": [
+          "End with the next step or a question."
+        ]
+      },
+      {
+        "id": "rt-06",
+        "expectedId": "billing-trial-api-key",
+        "got": "plan-403",
+        "top3": [
+          "plan-403"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-07",
+        "expectedId": "billing-trial-api-key",
+        "got": "billing-trial-api-key",
+        "top3": [
+          "billing-trial-api-key",
+          "plan-403"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 9.7,
+        "gatePass": true,
+        "gateToFix": [
+          "End with the next step or a question."
+        ]
+      },
+      {
+        "id": "rt-08",
+        "expectedId": "billing-trial-api-key",
+        "got": "plan-403",
+        "top3": [
+          "plan-403"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-09",
+        "expectedId": "billing-trial-api-key",
+        "got": "plan-403",
+        "top3": [
+          "plan-403"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-10",
+        "expectedId": "login-locked-out",
+        "got": "plan-403",
+        "top3": [
+          "plan-403"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-11",
+        "expectedId": "login-locked-out",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-12",
+        "expectedId": "login-locked-out",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-13",
+        "expectedId": "n8n-node-install",
+        "got": "n8n-node-install",
+        "top3": [
+          "n8n-node-install"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 10,
+        "gatePass": true,
+        "gateToFix": []
+      },
+      {
+        "id": "rt-14",
+        "expectedId": "n8n-node-install",
+        "got": "n8n-node-install",
+        "top3": [
+          "n8n-node-install"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 10,
+        "gatePass": true,
+        "gateToFix": []
+      },
+      {
+        "id": "rt-15",
+        "expectedId": "n8n-node-install",
+        "got": "n8n-node-install",
+        "top3": [
+          "n8n-node-install"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 10,
+        "gatePass": true,
+        "gateToFix": []
+      },
+      {
+        "id": "rt-16",
+        "expectedId": "n8n-node-install",
+        "got": "n8n-node-install",
+        "top3": [
+          "n8n-node-install"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 10,
+        "gatePass": true,
+        "gateToFix": []
+      },
+      {
+        "id": "rt-17",
+        "expectedId": "n8n-node-install",
+        "got": "n8n-node-install",
+        "top3": [
+          "n8n-node-install"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 10,
+        "gatePass": true,
+        "gateToFix": []
+      },
+      {
+        "id": "rt-18",
+        "expectedId": "n8n-node-install",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-19",
+        "expectedId": "n8n-node-install",
+        "got": "n8n-node-install",
+        "top3": [
+          "n8n-node-install"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 10,
+        "gatePass": true,
+        "gateToFix": []
+      },
+      {
+        "id": "rt-20",
+        "expectedId": "n8n-node-install",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-21",
+        "expectedId": "n8n-node-install",
+        "got": "n8n-node-install",
+        "top3": [
+          "n8n-node-install"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 10,
+        "gatePass": true,
+        "gateToFix": []
+      },
+      {
+        "id": "rt-22",
+        "expectedId": "n8n-node-install",
+        "got": "n8n-node-install",
+        "top3": [
+          "n8n-node-install"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 10,
+        "gatePass": true,
+        "gateToFix": []
+      },
+      {
+        "id": "rt-23",
+        "expectedId": "n8n-node-install",
+        "got": "n8n-node-install",
+        "top3": [
+          "n8n-node-install"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 10,
+        "gatePass": true,
+        "gateToFix": []
+      },
+      {
+        "id": "rt-24",
+        "expectedId": "n8n-node-bug",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-25",
+        "expectedId": "n8n-node-bug",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-26",
+        "expectedId": "n8n-node-bug",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-27",
+        "expectedId": "media-90009",
+        "got": "server-9999",
+        "top3": [
+          "server-9999"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-28",
+        "expectedId": "media-90009",
+        "got": "server-9999",
+        "top3": [
+          "server-9999"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-29",
+        "expectedId": "upload-in-progress",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-30",
+        "expectedId": "media-90009",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-31",
+        "expectedId": "media-90009",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-32",
+        "expectedId": "connection-422",
+        "got": "connection-422",
+        "top3": [
+          "connection-422"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 9.7,
+        "gatePass": true,
+        "gateToFix": [
+          "Add a short human opener (thanks, sorry, good question, quick fix)."
+        ]
+      },
+      {
+        "id": "rt-33",
+        "expectedId": "tiktok-url-ownership",
+        "got": "tiktok-url-ownership",
+        "top3": [
+          "tiktok-url-ownership"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 8.7,
+        "gatePass": true,
+        "gateToFix": [
+          "The fix is vague: name the setting, field, link or number.",
+          "Add a short human opener (thanks, sorry, good question, quick fix)."
+        ]
+      },
+      {
+        "id": "rt-34",
+        "expectedId": "unsupported-media",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-35",
+        "expectedId": "media-90009",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-36",
+        "expectedId": "media-90009",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-37",
+        "expectedId": "n8n-server-url",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-38",
+        "expectedId": "post-analytics",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-39",
+        "expectedId": "post-analytics",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-40",
+        "expectedId": "ai-video-credits-quality",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-41",
+        "expectedId": "ai-video-credits-quality",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-42",
+        "expectedId": "ai-video-credits-quality",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-43",
+        "expectedId": "silent-success",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-44",
+        "expectedId": "tiktok-public-url",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-45",
+        "expectedId": "linkedin-nonexistent-version",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-46",
+        "expectedId": "upload-201-created",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-47",
+        "expectedId": "find-account-ids",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "rt-48",
+        "expectedId": "auth-401",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      }
+    ]
+  },
+  "heldOut": {
+    "cases": 8,
+    "top1": 1,
+    "top3": 1,
+    "gatePass": 1,
+    "results": [
+      {
+        "id": "ho-01",
+        "expectedId": "billing-trial-api-key",
+        "got": "billing-trial-api-key",
+        "top3": [
+          "billing-trial-api-key"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 9.7,
+        "gatePass": true,
+        "gateToFix": [
+          "End with the next step or a question."
+        ]
+      },
+      {
+        "id": "ho-02",
+        "expectedId": "n8n-node-install",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "ho-03",
+        "expectedId": "media-90009",
+        "got": "server-9999",
+        "top3": [
+          "server-9999"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "ho-04",
+        "expectedId": "silent-success",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "ho-05",
+        "expectedId": "upload-in-progress",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "ho-06",
+        "expectedId": "upload-201-created",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "ho-07",
+        "expectedId": "login-locked-out",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "ho-08",
+        "expectedId": "post-analytics",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      }
+    ]
+  },
+  "heldOutBlind": {
+    "cases": 14,
+    "top1": 4,
+    "top3": 4,
+    "gatePass": 4,
+    "results": [
+      {
+        "id": "hb-01",
+        "expectedId": "billing-trial-api-key",
+        "got": "plan-403",
+        "top3": [
+          "plan-403"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "hb-02",
+        "expectedId": "billing-trial-api-key",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "hb-03",
+        "expectedId": "n8n-node-install",
+        "got": "n8n-node-install",
+        "top3": [
+          "n8n-node-install"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 10,
+        "gatePass": true,
+        "gateToFix": []
+      },
+      {
+        "id": "hb-04",
+        "expectedId": "n8n-node-install",
+        "got": "n8n-node-install",
+        "top3": [
+          "n8n-node-install"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 10,
+        "gatePass": true,
+        "gateToFix": []
+      },
+      {
+        "id": "hb-05",
+        "expectedId": "media-90009",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "hb-06",
+        "expectedId": "silent-success",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "hb-07",
+        "expectedId": "upload-in-progress",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "hb-08",
+        "expectedId": "tiktok-url-ownership",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "hb-09",
+        "expectedId": "rate-429",
+        "got": "rate-429",
+        "top3": [
+          "rate-429"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 9.4,
+        "gatePass": true,
+        "gateToFix": [
+          "Add a short human opener (thanks, sorry, good question, quick fix).",
+          "End with the next step or a question."
+        ]
+      },
+      {
+        "id": "hb-10",
+        "expectedId": "connection-422",
+        "got": "connection-422",
+        "top3": [
+          "connection-422"
+        ],
+        "hit": true,
+        "hit3": true,
+        "gateScore": 9.7,
+        "gatePass": true,
+        "gateToFix": [
+          "Add a short human opener (thanks, sorry, good question, quick fix)."
+        ]
+      },
+      {
+        "id": "hb-11",
+        "expectedId": "published-immediately",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "hb-12",
+        "expectedId": "n8n-server-url",
+        "got": "not-found-404",
+        "top3": [
+          "not-found-404"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "hb-13",
+        "expectedId": "find-account-ids",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      },
+      {
+        "id": "hb-14",
+        "expectedId": "stuck-in-progress",
+        "got": "unknown",
+        "top3": [
+          "unknown"
+        ],
+        "hit": false,
+        "hit3": false
+      }
+    ]
+  }
+}

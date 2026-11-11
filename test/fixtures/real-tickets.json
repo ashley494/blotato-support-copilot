@@ -1,0 +1,404 @@
+[
+  {
+    "id": "rt-01",
+    "window": "in",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2026-08-29" },
+    "customerText": "I'm trying to cancel my subscription but the cancel pop-up won't close, so I can't cancel.",
+    "expectedId": "billing-trial-api-key",
+    "notes": "1-star review. Summary from docs/ticket-evidence.md; the summary-to-review pairing follows the order of the list there."
+  },
+  {
+    "id": "rt-02",
+    "window": "in",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2026-08-02" },
+    "customerText": "I paid but my plan never activated, and it keeps asking me for payment.",
+    "expectedId": "billing-trial-api-key",
+    "notes": "1-star review. Payment not applied is a billing hand-off. Pairing follows list order in the evidence doc."
+  },
+  {
+    "id": "rt-03",
+    "window": "in",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2026-07-01" },
+    "customerText": "I was charged and then my cancellation failed.",
+    "expectedId": "billing-trial-api-key",
+    "notes": "1-star review. Pairing follows list order in the evidence doc."
+  },
+  {
+    "id": "rt-04",
+    "window": "in",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2026-02-23" },
+    "customerText": "I was charged $29, cancelled right away, and my refund was refused.",
+    "expectedId": "billing-trial-api-key",
+    "notes": "1-star review. Refund dispute: must go to a human, no refund promise."
+  },
+  {
+    "id": "rt-05",
+    "window": "in",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2026-01-27" },
+    "customerText": "You've charged me three times in two weeks.",
+    "expectedId": "billing-trial-api-key",
+    "notes": "1-star review. Multiple charges: billing hand-off."
+  },
+  {
+    "id": "rt-06",
+    "window": "in",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2026-01-06" },
+    "customerText": "A $10 purchase I made through a third party started a Blotato subscription.",
+    "expectedId": "billing-trial-api-key",
+    "notes": "1-star review. Unexpected subscription: billing hand-off."
+  },
+  {
+    "id": "rt-07",
+    "window": "in",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=2", "date": "2026-07-30" },
+    "customerText": "I was charged after the trial.",
+    "expectedId": "billing-trial-api-key",
+    "notes": "2-star review. The evidence doc lists this one as charged during or after the trial."
+  },
+  {
+    "id": "rt-08",
+    "window": "older",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2025-08-31" },
+    "customerText": "I was charged immediately even though I signed up for a free trial.",
+    "expectedId": "billing-trial-api-key",
+    "notes": "Older than the window. The evidence doc quotes this review as charged immediately despite a free trial."
+  },
+  {
+    "id": "rt-09",
+    "window": "older",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2025-11-03" },
+    "customerText": "My account says past due and I'm still on the trial.",
+    "expectedId": "billing-trial-api-key",
+    "notes": "Older than the window (window starts 2025-11-09)."
+  },
+  {
+    "id": "rt-10",
+    "window": "in",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2026-08-07" },
+    "customerText": "I got locked out when I tried to log in on my second computer during the trial. Nobody replied, so I froze my card.",
+    "expectedId": "login-locked-out",
+    "newRule": true,
+    "notes": "Account access after payment. No self-serve fix exists; route to a human."
+  },
+  {
+    "id": "rt-11",
+    "window": "older",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2025-10-21" },
+    "customerText": "I paid for the API and now I can't log in.",
+    "expectedId": "login-locked-out",
+    "newRule": true,
+    "notes": "Older. The evidence doc lists this reviewer under both billing and login; counted once, as a login case, because the lockout is the blocking problem."
+  },
+  {
+    "id": "rt-12",
+    "window": "older",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2025-06-18" },
+    "customerText": "I paid and now I'm locked out of my account.",
+    "expectedId": "login-locked-out",
+    "newRule": true,
+    "notes": "Older. The evidence doc gives only the category (paid but locked out)."
+  },
+  {
+    "id": "rt-13",
+    "window": "in",
+    "source": { "url": "https://community.n8n.io/t/249245", "date": "2026-01-13" },
+    "customerText": "I can't install the Blotato node in n8n. I'm on Hostinger, and when I click Install I get: Error loading package \"@blotato/n8n-nodes-blotato\": Checksum verification failed.",
+    "expectedId": "n8n-node-install",
+    "notes": "Read in full. Same person filed https://github.com/n8n-io/n8n/issues/24223; counted once."
+  },
+  {
+    "id": "rt-14",
+    "window": "in",
+    "source": { "url": "https://community.n8n.io/t/229135", "date": "2025-12-01" },
+    "customerText": "My workflow says Unrecognized node type: @blotato/n8n-nodes-blotato.blotato, and there's no Add Community Node button in my n8n, so I can't install it.",
+    "expectedId": "n8n-node-install",
+    "notes": "Read in full."
+  },
+  {
+    "id": "rt-15",
+    "window": "in",
+    "source": { "url": "https://github.com/n8n-io/n8n/issues/24021", "date": "2026-01-08" },
+    "customerText": "Running n8n locally, I go to Settings > Community Nodes and try to install \"@blotato/n8n-nodes-blotato.blotato\", and it won't install.",
+    "expectedId": "n8n-node-install",
+    "notes": "Read in full. The package name typed includes the node-type suffix (.blotato); the package is @blotato/n8n-nodes-blotato. The current rule's fix does not mention this."
+  },
+  {
+    "id": "rt-16",
+    "window": "in",
+    "source": { "url": "https://github.com/Blotato-Inc/n8n-nodes-blotato/issues/10", "date": "2026-02-04" },
+    "customerText": "I installed the package, but when I run the workflow it says Unrecognized node type: @blotato/n8n-nodes-preview-blotato.blotato. I turned on community nodes in the env vars, restarted, and reinstalled several times. I'm on EasyPanel.",
+    "expectedId": "n8n-node-install",
+    "notes": "Read in full. The workflow references the preview package, not the one installed."
+  },
+  {
+    "id": "rt-17",
+    "window": "in",
+    "source": { "url": "https://community.n8n.io/t/126628", "date": "2025-12-17" },
+    "customerText": "I'm on n8n Cloud Pro. Under Settings > Community Nodes there's no Install button. I only see @blotato/n8n-nodes-blotato, which I installed before.",
+    "expectedId": "n8n-node-install",
+    "notes": "Read in full (post 11)."
+  },
+  {
+    "id": "rt-18",
+    "window": "in",
+    "source": { "url": "https://community.n8n.io/t/172669", "date": "2025-11-21" },
+    "customerText": "How do I find the Blotato node to install it in n8n?",
+    "expectedId": "n8n-node-install",
+    "notes": "Read in full (post 6). The post says 'this node' in a thread titled 'Blotato node fails checksum'; 'Blotato' and 'n8n' come from that thread."
+  },
+  {
+    "id": "rt-19",
+    "window": "older",
+    "source": { "url": "https://github.com/Blotato-Inc/n8n-nodes-blotato/issues/1", "date": "2025-08-16" },
+    "customerText": "I can't install Blotato on my self-hosted n8n, which is up to date. Error installing new package: Error loading package \"@blotato/n8n-nodes-blotato\": Checksum verification failed.",
+    "expectedId": "n8n-node-install",
+    "notes": "Older. Read in full."
+  },
+  {
+    "id": "rt-20",
+    "window": "older",
+    "source": { "url": "https://community.n8n.io/t/172669", "date": "2025-08-20" },
+    "customerText": "The Blotato node keeps failing the checksum when I install it in n8n. Installing with npm worked, but n8n doesn't find it.",
+    "expectedId": "n8n-node-install",
+    "notes": "Older. Post 1 of a thread the evidence doc cites; the doc did not list this post separately."
+  },
+  {
+    "id": "rt-21",
+    "window": "older",
+    "source": { "url": "https://github.com/Blotato-Inc/n8n-nodes-blotato/issues/7", "date": "2025-09-23" },
+    "customerText": "I'm following a video workflow on local n8n and need to install Blotato, but I get: Checksum verification failed. Package integrity does not match.",
+    "expectedId": "n8n-node-install",
+    "notes": "Older. Read in full."
+  },
+  {
+    "id": "rt-22",
+    "window": "older",
+    "source": { "url": "https://github.com/Blotato-Inc/n8n-nodes-blotato/issues/8", "date": "2025-11-05" },
+    "customerText": "Installing Blotato from the n8n UI fails: Error installing new package, Error loading package \"@blotato/n8n-nodes-blotato\": Checksum verification failed.",
+    "expectedId": "n8n-node-install",
+    "notes": "Older (four days before the window). Read in full."
+  },
+  {
+    "id": "rt-23",
+    "window": "older",
+    "source": { "url": "https://github.com/Blotato-Inc/n8n-nodes-blotato/issues/4", "date": "2025-09-15" },
+    "customerText": "The new Blotato update won't download. I updated my n8n instance and the community node, but the new features don't show up and it says I'm on a legacy version.",
+    "expectedId": "n8n-node-install",
+    "notes": "Older. Read in full. Install and update share the same fix path."
+  },
+  {
+    "id": "rt-24",
+    "window": "older",
+    "source": { "url": "https://github.com/Blotato-Inc/n8n-nodes-blotato/issues/6", "date": "2025-09-23" },
+    "customerText": "I can't choose the VIDEO value in the Blotato node in n8n.",
+    "expectedId": "n8n-node-bug",
+    "newRule": true,
+    "notes": "Older. Read in full: title plus a screenshot, no other text. Not categorised in the evidence doc. No documented fix; a node bug report for engineering."
+  },
+  {
+    "id": "rt-25",
+    "window": "older",
+    "source": { "url": "https://github.com/Blotato-Inc/n8n-nodes-blotato/issues/3", "date": "2025-09-02" },
+    "customerText": "The Blotato node errored but the success path still ran in my n8n workflow. It happens every time, with any kind of error.",
+    "expectedId": "n8n-node-bug",
+    "newRule": true,
+    "notes": "Older. Read in full. The evidence doc files it under silent success, but the customer already knows the post failed; the ask is a node bug fix, so it goes to engineering."
+  },
+  {
+    "id": "rt-26",
+    "window": "older",
+    "source": { "url": "https://github.com/Blotato-Inc/n8n-nodes-blotato/issues/2", "date": "2025-08-23" },
+    "customerText": "When I set the scheduled time in the n8n Blotato node, fixed or expression, I get: Cannot read properties of undefined (reading 'split'). The fixed date I used is 2025-08-24 18:30:00.",
+    "expectedId": "n8n-node-bug",
+    "newRule": true,
+    "notes": "Older. Read in full. The date has no 'T' or timezone, so ISO 8601 is the first thing to try, but the crash is inside the node, so it also goes to engineering."
+  },
+  {
+    "id": "rt-27",
+    "window": "in",
+    "source": { "url": "https://community.make.com/t/100351", "date": "2026-01-07" },
+    "status": 500,
+    "customerText": "Since yesterday 4 of my Make scenarios fail with [500] Failed to read media metadata. Is the file accessible and a valid media file? The video links in my Google Sheet are open to everyone and it always worked before.",
+    "expectedId": "media-90009",
+    "notes": "Read in full. Same author as rt-28 and rt-29 (three different problems, three cases). The 500 is Blotato failing to fetch the file, not a server fault."
+  },
+  {
+    "id": "rt-28",
+    "window": "in",
+    "source": { "url": "https://community.make.com/t/97934", "date": "2025-12-04" },
+    "status": 500,
+    "customerText": "Sometimes I get error 500 when uploading an image or video to Blotato from a Google Drive ID in Make, and sometimes I don't. Adding a sleep between the Drive step and the upload fixes it.",
+    "expectedId": "media-90009",
+    "notes": "Read in full. Same author as rt-27 and rt-29. Ambiguous: a reply in the thread blames duplicate URLs (which would be upload-in-progress); the evidence doc files it under Drive media. Kept as media-90009."
+  },
+  {
+    "id": "rt-29",
+    "window": "in",
+    "source": { "url": "https://community.make.com/t/97653", "date": "2025-12-01" },
+    "customerText": "Why does Make give me an error, but then the video loads in Blotato anyway?",
+    "expectedId": "upload-in-progress",
+    "notes": "Read in full. The error text was only in a screenshot; a reply names it as 'A media upload for this URL is already in progress'. Kept out of the customer text because the customer did not type it."
+  },
+  {
+    "id": "rt-30",
+    "window": "in",
+    "source": { "url": "https://community.n8n.io/t/302420", "date": "2026-07-20" },
+    "customerText": "Blotato can't read my media. The URL I'm sending turned out to be a temporary preview link, not the real public file.",
+    "expectedId": "media-90009",
+    "notes": "Not re-read (forum rate-limited the fetch); from the evidence doc summary, which already contains the root cause, so this case is easier than a raw ticket."
+  },
+  {
+    "id": "rt-31",
+    "window": "in",
+    "source": { "url": "https://www.blotato.com/blog/social-media-api-errors", "date": "2026-09-10" },
+    "customerText": "Most of my failed posts died at the media step before they ever reached the platform.",
+    "expectedId": "media-90009",
+    "notes": "Vendor blog sample of one agency account (13 failures, 9 on media). Not the customer's own words; no exact error text given."
+  },
+  {
+    "id": "rt-32",
+    "window": "in",
+    "source": { "url": "https://www.blotato.com/blog/social-media-api-errors", "date": "2026-09-10" },
+    "customerText": "My post failed with: LinkedIn account has expired.",
+    "expectedId": "connection-422",
+    "notes": "Same vendor blog sample as rt-31 (one account, separate error)."
+  },
+  {
+    "id": "rt-33",
+    "window": "in",
+    "source": { "url": "https://www.blotato.com/blog/social-media-api-errors", "date": "2026-09-10" },
+    "customerText": "My TikTok video failed with: Please review our URL ownership verification rules.",
+    "expectedId": "tiktok-url-ownership",
+    "notes": "Same vendor blog sample as rt-31."
+  },
+  {
+    "id": "rt-34",
+    "window": "in",
+    "source": { "url": "https://www.blotato.com/blog/social-media-api-errors", "date": "2026-09-10" },
+    "customerText": "Two of my posts failed with Could not upload media to storage. The video was a .mov file.",
+    "expectedId": "unsupported-media",
+    "notes": "Same vendor blog sample as rt-31. Advice in the blog was H.264 MP4."
+  },
+  {
+    "id": "rt-35",
+    "window": "older",
+    "source": { "url": "https://community.n8n.io/t/205135", "date": "2025-10-14" },
+    "customerText": "Instagram rejects my image URLs that come from an image resize proxy.",
+    "expectedId": "media-90009",
+    "notes": "Older. Not re-read (rate-limited); from the evidence doc summary. Fix is the same family: give Blotato a direct, stable file or upload it to Blotato first."
+  },
+  {
+    "id": "rt-36",
+    "window": "older",
+    "source": { "url": "https://community.n8n.io/t/130711", "date": "2025-06" },
+    "customerText": "The template's Google Drive step drops the underscore from my file IDs, so the media link breaks.",
+    "expectedId": "media-90009",
+    "notes": "Older. Not re-read; from the evidence doc summary. Same thread as rt-37, which may be a different poster."
+  },
+  {
+    "id": "rt-37",
+    "window": "older",
+    "source": { "url": "https://community.n8n.io/t/130711", "date": "2025-06" },
+    "customerText": "My n8n Blotato credential has the server set to https://backend.blotato.com/v2 and I get: The resource you are requesting could not be found.",
+    "expectedId": "n8n-server-url",
+    "notes": "Older. Not re-read; from the evidence doc's description of the report."
+  },
+  {
+    "id": "rt-38",
+    "window": "in",
+    "source": { "url": "https://www.g2.com/products/blotato-ai/reviews_and_filters", "date": "undated" },
+    "customerText": "I want my Instagram likes, saves and impressions back in Google Sheets.",
+    "expectedId": "post-analytics",
+    "newRule": true,
+    "notes": "G2 review, date not shown. Pairing of this summary with the G2 link follows list order in the evidence doc."
+  },
+  {
+    "id": "rt-39",
+    "window": "older",
+    "source": { "url": "https://community.n8n.io/t/205536", "date": "2025-10-14" },
+    "customerText": "Is there a way to get analytics for my posts from Blotato?",
+    "expectedId": "post-analytics",
+    "newRule": true,
+    "notes": "Older. Not re-read; the founder replied analytics were not available then. The vendor blog's 'several reviewers want deeper analytics' is an aggregate, not a report, and is not a case."
+  },
+  {
+    "id": "rt-40",
+    "window": "in",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=3", "date": "2026-05-28" },
+    "customerText": "One two-minute vertical video used up my whole month's credits.",
+    "expectedId": "ai-video-credits-quality",
+    "newRule": true,
+    "notes": "3-star review."
+  },
+  {
+    "id": "rt-41",
+    "window": "in",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=2", "date": "2026-05-22" },
+    "customerText": "It works fine as a publisher, but the AI video quality is poor.",
+    "expectedId": "ai-video-credits-quality",
+    "newRule": true,
+    "notes": "2-star review. Product feedback: acknowledge and pass to the product team."
+  },
+  {
+    "id": "rt-42",
+    "window": "in",
+    "source": { "url": "https://www.trustpilot.com/review/blotato.com?stars=1", "date": "2026-05-10" },
+    "customerText": "A template change broke my formatting, and after I upgraded the API changes meant I had to rework my setup.",
+    "expectedId": "ai-video-credits-quality",
+    "newRule": true,
+    "notes": "Same reviewer posted 1-star (2026-05-10) and 3-star (2026-05-15); counted once."
+  },
+  {
+    "id": "rt-43",
+    "window": "in",
+    "source": { "url": "https://community.n8n.io/t/250979", "date": "2026-01-16" },
+    "customerText": "My n8n workflow has run 183 times successfully, but nothing was posted on LinkedIn, Facebook or Instagram.",
+    "expectedId": "silent-success",
+    "notes": "Not re-read (rate-limited); from the evidence doc. Replies traced it to an n8n filter passing zero items."
+  },
+  {
+    "id": "rt-44",
+    "window": "in",
+    "source": { "url": "https://github.com/Blotato-Inc/n8n-nodes-blotato/issues/9", "date": "2026-01-02" },
+    "customerText": "I posted to TikTok from n8n, waited, then did a GET on the post id. The publicUrl is my account profile, not the video, even after waiting longer.",
+    "expectedId": "tiktok-public-url",
+    "newRule": true,
+    "notes": "Read in full. No documented fix; escalate with the postSubmissionId."
+  },
+  {
+    "id": "rt-45",
+    "window": "in",
+    "source": { "url": "https://github.com/Blotato-Inc/n8n-nodes-blotato/issues/11", "date": "2026-09-15" },
+    "customerText": "error con linkedin: NONEXISTENT_VERSION",
+    "expectedId": "linkedin-nonexistent-version",
+    "newRule": true,
+    "notes": "Read in full; that is the whole report (Spanish). Assumption from the evidence doc: Blotato is calling a LinkedIn API version LinkedIn retired. Not user-fixable; escalate."
+  },
+  {
+    "id": "rt-46",
+    "window": "in",
+    "source": { "url": "https://github.com/DoctorCRE/carr-system/pull/3052", "date": "2026-11-06" },
+    "status": 201,
+    "customerText": "My weekly social batch stopped with submit_failed: media upload answered HTTP 201.",
+    "expectedId": "upload-201-created",
+    "newRule": true,
+    "notes": "Read in full. A fix PR in a customer's repo, not a ticket; the customer's code accepted only 200."
+  },
+  {
+    "id": "rt-47",
+    "window": "in",
+    "source": { "url": "https://github.com/beserericl-hue/Automations/pull/281", "date": "2026-11-05" },
+    "customerText": "My Blotato key is connected to six platforms but I can only post to LinkedIn, and the form makes me type the LinkedIn account id by hand.",
+    "expectedId": "find-account-ids",
+    "newRule": true,
+    "notes": "Read in full. A fix PR in the customer's own app; the cause was their app, but the Blotato answer is the same: read account and page ids from the API, don't type them."
+  },
+  {
+    "id": "rt-48",
+    "window": "in",
+    "source": { "url": "https://github.com/Sholbk/Athena/pull/28", "date": "2026-10-22" },
+    "customerText": "My app's settings page refuses my real Blotato API key.",
+    "expectedId": "auth-401",
+    "notes": "Read in full. A key-shape check in the customer's app refused a valid key. The evidence doc assumes the trailing '=' is involved; the PR does not say."
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "hb-01",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "hey so i started the free trial last week and cancelled before it ended (or i thought i did) but my card just got hit for $29?? can i get that back pls",
+    "expectedId": "billing-trial-api-key",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-02",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "Hi, there are two identical Blotato charges on my credit card statement this month, same day, same amount. I only have one account. Please fix this.",
+    "expectedId": "billing-trial-api-key",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-03",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "Imported a workflow I got from a youtube video and all the blotato steps show up with a question mark saying the node needs to be installed. I'm on n8n cloud and when I go into settings I don't see anywhere to add community nodes. what am I missing",
+    "expectedId": "n8n-node-install",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-04",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "self hosted n8n in docker. ran the npm install for the blotato package, restarted the container, still cant find blotato when i search the nodes panel. tried twice",
+    "expectedId": "n8n-node-install",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-05",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "My posts keep failing whenever the video comes from my Google Drive folder. Sharing is set to anyone with the link. The error says something about not being able to read the media metadata.",
+    "expectedId": "media-90009",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-06",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "n8n run is all green, the blotato node gave me back a submission id and everything, but nothing shows up on my facebook page. checked 3 times over the last hour. whats going on",
+    "expectedId": "silent-success",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-07",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "weird one. my make scenario sometimes fires twice at the same moment (two rows land in the sheet together) and one of the runs errors on the blotato upload module, but when I look the image is sitting in blotato just fine. should I be worried about that error?",
+    "expectedId": "upload-in-progress",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-08",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "TikTok posts fail every single time, every other platform is fine. The error mentions verifying that I own the URL? I host the mp4s on my own S3 bucket.",
+    "expectedId": "tiktok-url-ownership",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-09",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "getting Too Many Requests back when I bulk schedule. I'm looping through about 200 posts in a python script, first 30 or so go through then it starts failing",
+    "status": 429,
+    "expectedId": "rate-429",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-10",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "LinkedIn was working fine until yesterday, now every post to it fails instantly with a 422. didn't change anything on my end. there's a little warning icon next to it in my dashboard",
+    "status": 422,
+    "expectedId": "connection-422",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-11",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "I set the post for Friday 9am and it went live the second I hit run. Using the API and I passed the scheduled time in the request. Why didn't it wait?",
+    "expectedId": "published-immediately",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-12",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "Blotato credential test fails in n8n. I put https://backend.blotato.com/v2 in the server box since that's what the API docs show, and it just comes back 404 Not Found.",
+    "status": 404,
+    "expectedId": "n8n-server-url",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-13",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "where do i get the account id for instagram?? and for my facebook business page it also wants some page id. no clue where to find either",
+    "expectedId": "find-account-ids",
+    "newRule": true,
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  },
+  {
+    "id": "hb-14",
+    "source": {
+      "url": "written blind by a separate agent",
+      "date": "2026-11-10"
+    },
+    "customerText": "Instagram reel has shown 'in progress' since this morning, about 6 hours now. It never finishes and never fails, just sits there.",
+    "expectedId": "stuck-in-progress",
+    "notes": "Blind held-out: written after tuning by an agent that saw only one-line issue descriptions, never the rules or the real tickets. Not used to tune."
+  }
+]

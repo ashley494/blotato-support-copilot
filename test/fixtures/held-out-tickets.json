@@ -1,0 +1,60 @@
+[
+  {
+    "id": "ho-01",
+    "source": { "url": "written fresh", "date": "2026-11-10" },
+    "customerText": "Hi, I want my money back. You billed me twice this month.",
+    "expectedId": "billing-trial-api-key",
+    "notes": "Held out. Same problem as rt-04 and rt-05, different words (money back, billed twice)."
+  },
+  {
+    "id": "ho-02",
+    "source": { "url": "written fresh", "date": "2026-11-10" },
+    "customerText": "When I open the template in n8n the Blotato step just shows a question mark and says it doesn't know that node.",
+    "expectedId": "n8n-node-install",
+    "notes": "Held out. Same problem as rt-14, without the exact error text."
+  },
+  {
+    "id": "ho-03",
+    "source": { "url": "written fresh", "date": "2026-11-10" },
+    "status": 500,
+    "customerText": "Getting a 500 that says it can't read the media metadata. The video is a Dropbox link.",
+    "expectedId": "media-90009",
+    "notes": "Held out. Same problem as rt-27, Dropbox instead of Google Sheets."
+  },
+  {
+    "id": "ho-04",
+    "source": { "url": "written fresh", "date": "2026-11-10" },
+    "customerText": "Every execution in n8n is green, but my Facebook page hasn't gotten a single new post this week.",
+    "expectedId": "silent-success",
+    "notes": "Held out. Same problem as rt-43."
+  },
+  {
+    "id": "ho-05",
+    "source": { "url": "written fresh", "date": "2026-11-10" },
+    "customerText": "Make throws an error on the Blotato upload module, yet the image is sitting there in Blotato.",
+    "expectedId": "upload-in-progress",
+    "notes": "Held out. Same problem as rt-29."
+  },
+  {
+    "id": "ho-06",
+    "source": { "url": "written fresh", "date": "2026-11-10" },
+    "status": 201,
+    "customerText": "My script treats the response as an error because Blotato returned 201 Created instead of 200 when I create a post.",
+    "expectedId": "upload-201-created",
+    "notes": "Held out. Same problem as rt-46, on post creation instead of media upload."
+  },
+  {
+    "id": "ho-07",
+    "source": { "url": "written fresh", "date": "2026-11-10" },
+    "customerText": "I'm paying every month and I can't sign in to my account anymore.",
+    "expectedId": "login-locked-out",
+    "notes": "Held out. Same problem as rt-10 to rt-12."
+  },
+  {
+    "id": "ho-08",
+    "source": { "url": "written fresh", "date": "2026-11-10" },
+    "customerText": "Can I pull views and reach for my published posts through the API?",
+    "expectedId": "post-analytics",
+    "notes": "Held out. Same problem as rt-38 and rt-39."
+  }
+]
