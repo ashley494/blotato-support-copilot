@@ -1,0 +1,313 @@
+{
+ "date": "2026-11-10",
+ "judge": "claude-cli",
+ "model": "claude-cli default",
+ "results": [
+  {
+   "id": "r2-G1",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Draft passed the pattern checks and the AI judge."
+  },
+  {
+   "id": "r2-G10",
+   "expect": "send",
+   "got": "hold",
+   "ok": false,
+   "patterns": "9/10 C1_correct_fix",
+   "judge": "9/10",
+   "why": "AI judge: Q6_action: The reply never instructs the customer to do anything; \"Note that clicking Generate API Key in Settings > API ends the trial\" is a warning, not a direction to upgrade or take a step."
+  },
+  {
+   "id": "r2-G2",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Draft passed the pattern checks and the AI judge."
+  },
+  {
+   "id": "r2-G3",
+   "expect": "send",
+   "got": "hold",
+   "ok": false,
+   "patterns": "8/10 C1_correct_fix",
+   "judge": "9/10",
+   "why": "AI judge: C1_correct_fix: The reply says \"Pause a minute, then resend\" instead of telling the customer to wait the number of seconds given in the 429 response, so only the polling half (\"15 seconds apart\") matches the co"
+  },
+  {
+   "id": "r2-G4",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "9/10 C1_correct_fix",
+   "judge": "10/10",
+   "why": "Draft passed the pattern checks and the AI judge."
+  },
+  {
+   "id": "r2-G5",
+   "expect": "send",
+   "got": "hold",
+   "ok": false,
+   "patterns": "10/10 -",
+   "judge": "9/10",
+   "why": "AI judge: C1_correct_fix: The reply only says \"convert it to MP4 (H.264) and post it again\", assuming an unmentioned .mov video, and omits JPG/PNG for images and the need for a URL that returns the raw file."
+  },
+  {
+   "id": "r2-G6",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "8/10 C1_correct_fix",
+   "judge": "10/10",
+   "why": "Draft passed the pattern checks and the AI judge."
+  },
+  {
+   "id": "r2-G7",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "8/10 C1_correct_fix",
+   "judge": "10/10",
+   "why": "Draft passed the pattern checks and the AI judge."
+  },
+  {
+   "id": "r2-G8",
+   "expect": "send",
+   "got": "hold",
+   "ok": false,
+   "patterns": "8/10 C1_correct_fix",
+   "judge": "9/10",
+   "why": "AI judge: Q7_specific: Only vague references such as \"Give it a minute\" and \"the time\"; it names no specific setting, field, link, file type or clear number, not even the error code 9999."
+  },
+  {
+   "id": "r2-G9",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Draft passed the pattern checks and the AI judge."
+  },
+  {
+   "id": "r2-W1",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "9/10",
+   "why": "AI judge: C2_no_wrong_fix: \"Also set useNextFreeSlot to true in that same body so Blotato schedules it as a backup\" is unsupported extra advice that could conflict with scheduledTime and move the post off the 9am the cus"
+  },
+  {
+   "id": "r2-W10",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "7/10",
+   "why": "AI judge: C1_correct_fix: It says \"Check you're using the postSubmissionId from the create call\" but then cancels that out with \"A wrong ID would come back as a 404\", and never mentions checking the calendar for a cancel"
+  },
+  {
+   "id": "r2-W11",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "6/10",
+   "why": "AI judge: C1_correct_fix: It says \"I'm passing this to our billing team\" and asks for \"your account email\" but never asks for the receipt details (amount, date) that correct handling requires. | C2_no_wrong_fix: \"to paus"
+  },
+  {
+   "id": "r2-W12",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "9/10 -",
+   "judge": "9/10",
+   "why": "AI judge: C2_no_wrong_fix: Asking the customer to \"reply with your account email and your password\" so staff can \"sign in as you\" is harmful, insecure advice."
+  },
+  {
+   "id": "r2-W13",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "9/10",
+   "why": "AI judge: C2_no_wrong_fix: \"send the same upload two or three more times so it sticks\" is wrong and harmful advice, since the upload already succeeded and re-sending creates duplicates."
+  },
+  {
+   "id": "r2-W14",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "9/10 C1_correct_fix",
+   "judge": "8/10",
+   "why": "AI judge: C1_correct_fix: The reply rejects the correct fix, saying \"Uploading to Blotato won't help with this one\", instead of telling the customer to upload the video to Blotato and post the returned Blotato URL. | C2_"
+  },
+  {
+   "id": "r2-W15",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "8/10",
+   "why": "AI judge: C1_correct_fix: The reply says \"Any member can install... you don't need the owner, and there's no setting to turn on first,\" which contradicts the correct handling that the owner must enable (verified) communi"
+  },
+  {
+   "id": "r2-W16",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "9/10 -",
+   "judge": "7/10",
+   "why": "AI judge: C1_correct_fix: The correct fix is one retry after a minute then escalate, but the reply says \"Retry it in a loop until it goes through\". | C2_no_wrong_fix: \"Retry it in a loop until it goes through; it usually"
+  },
+  {
+   "id": "r2-W17",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "9/10 -",
+   "judge": "6/10",
+   "why": "AI judge: C1_correct_fix: The reply never points to the analytics help entry or analytics endpoint; it says \"Blotato doesn't return analytics through the API or MCP\" instead. | C2_no_wrong_fix: It steers the customer awa"
+  },
+  {
+   "id": "r2-W18",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "8/10",
+   "why": "AI judge: C2_no_wrong_fix: It adds wrong advice that would break the calls: \"then add /v2/v2 to the path in each Blotato node\". | C3_no_false_facts: Saying to \"add /v2/v2 to the path ... so the calls still reach the API\""
+  },
+  {
+   "id": "r2-W19",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "9/10 -",
+   "judge": "6/10",
+   "why": "AI judge: C1_correct_fix: The reply says \"you don't need a paid plan or to upgrade\", the opposite of the correct handling that API access needs a paid plan (Starter). | C2_no_wrong_fix: It tells the customer to \"just gen"
+  },
+  {
+   "id": "r2-W2",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "7/10",
+   "why": "AI judge: C1_correct_fix: It does say to re-copy the key \"including the = at the end\" and use \"the blotato-api-key header\", but then says to \"put the word Bearer and a space in front of the key\", so the value sent is not"
+  },
+  {
+   "id": "r2-W20",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "9/10 -",
+   "judge": "6/10",
+   "why": "AI judge: C1_correct_fix: The reply never says to use a direct, public file link or to upload the file to Blotato; it only says \"Open the link in a private browser window first\" and \"Then try again.\" | C2_no_wrong_fix: I"
+  },
+  {
+   "id": "r2-W21",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "8/10",
+   "why": "AI judge: C1_correct_fix: It names the list call (\"GET /v2/users/me/accounts\") but never says to use items[].id and instead defines the id as \"the number in your profile URL on Instagram\", so the customer is not led to t"
+  },
+  {
+   "id": "r2-W22",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "7/10",
+   "why": "AI judge: C1_correct_fix: It says \"Check the status with the postSubmissionId\" but omits the Failed list and n8n item counts, and then pre-empts the check by concluding \"the post is live\". | C2_no_wrong_fix: \"If the run "
+  },
+  {
+   "id": "r2-W23",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "9/10 -",
+   "judge": "7/10",
+   "why": "AI judge: C1_correct_fix: The reply says \"delete it and upload the file again so you get a fresh copy\" instead of telling the customer to reuse the first upload's URL and upload one at a time. | C2_no_wrong_fix: \"Wait fo"
+  },
+  {
+   "id": "r2-W24",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "8/10",
+   "why": "AI judge: C2_no_wrong_fix: It advises \"call DELETE /v2/posts with the postSubmissionId\" to take down the early post, which is wrong because already-published posts cannot be deleted through the API. | C3_no_false_facts: "
+  },
+  {
+   "id": "r2-W3",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "6/10",
+   "why": "AI judge: C1_correct_fix: It says \"API access needs a paid plan\" but reverses the key part of the correct handling by claiming \"you keep your remaining trial days\" when generating a key ends the trial. | C2_no_wrong_fix:"
+  },
+  {
+   "id": "r2-W4",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "8/10",
+   "why": "AI judge: C1_correct_fix: The reply says \"Wait 2 seconds\" and \"poll the post status every 2 seconds\" instead of waiting the seconds given in the response and polling no faster than every 10 seconds. | C2_no_wrong_fix: Ad"
+  },
+  {
+   "id": "r2-W5",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "9/10 -",
+   "judge": "8/10",
+   "why": "AI judge: C1_correct_fix: The reply tells the customer to \"paste the normal drive.google.com/file/d/.../view address\", which is a preview page, not the direct public file link or Blotato upload the correct handling requi"
+  },
+  {
+   "id": "r2-W6",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "7/10",
+   "why": "AI judge: C1_correct_fix: The reply makes MP4 optional and dismisses it (\"You can convert to MP4 if you want... the format is not the problem\") instead of telling the customer to use MP4 (H.264) and a URL that returns th"
+  },
+  {
+   "id": "r2-W7",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "9/10",
+   "why": "AI judge: C2_no_wrong_fix: It gives unsupported, harmful advice that \"every scheduled post for that account is wiped, so you'll need to recreate them all by hand afterwards\" instead of simply retrying."
+  },
+  {
+   "id": "r2-W8",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "not run",
+   "why": "The customer's words match 2 issues (wrong-host, network-unreachable). A person picks the right one."
+  },
+  {
+   "id": "r2-W9",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "8/10",
+   "why": "AI judge: C1_correct_fix: The reply never tells the customer to check network, VPN, proxy or firewall or test with curl; it says \"Your network and VPN look fine from here\" instead. | C2_no_wrong_fix: \"This happens when t"
+  }
+ ]
+}

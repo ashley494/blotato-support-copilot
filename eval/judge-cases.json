@@ -1,0 +1,211 @@
+[
+ {
+  "id": "w01",
+  "expect": "hold",
+  "issue": {
+   "message": "My scheduled post went out right away"
+  },
+  "reply": "Sorry! Nest it as post.scheduledTime and it will wait. Let me know if that works?"
+ },
+ {
+  "id": "w02",
+  "expect": "hold",
+  "issue": {
+   "status": 401
+  },
+  "reply": "Thanks! Copy the key again and send it in the Authorization header as Bearer your-key. Let me know if that works?"
+ },
+ {
+  "id": "w03",
+  "expect": "hold",
+  "issue": {
+   "status": 403
+  },
+  "reply": "Good news, API access works on the free trial, so just generate a key in Settings > API. Let me know?"
+ },
+ {
+  "id": "w04",
+  "expect": "hold",
+  "issue": {
+   "status": 429
+  },
+  "reply": "Sorry! Just retry every 1 second, nonstop, until it goes through. Let me know if that helps?"
+ },
+ {
+  "id": "w05",
+  "expect": "hold",
+  "issue": {
+   "message": "Unsupported media type"
+  },
+  "reply": "Thanks! MOV files are fully supported, so upload the .mov again and it will work. Let me know?"
+ },
+ {
+  "id": "w06",
+  "expect": "hold",
+  "issue": {
+   "status": 422
+  },
+  "reply": "Sorry! Please don't reconnect, because reconnecting deletes all your scheduled posts. Just wait 24 hours. Let me know?"
+ },
+ {
+  "id": "w07",
+  "expect": "hold",
+  "issue": {
+   "message": "getaddrinfo ENOTFOUND backend.blotato.com"
+  },
+  "reply": "Thanks! This is not a network problem, the key has gone bad. Generate a new one in Settings > API. Let me know?"
+ },
+ {
+  "id": "w08",
+  "expect": "hold",
+  "issue": {
+   "message": "calling https://api.blotato.com/v2/posts fails"
+  },
+  "reply": "Quick fix: use https://backend.blotato.com/v1 instead and send the request again. Let me know if that works?"
+ },
+ {
+  "id": "w09",
+  "expect": "hold",
+  "issue": {
+   "message": "I was charged twice, I want a refund"
+  },
+  "reply": "Sorry about that! I'm passing it to our billing team, and you will definitely be refunded in full. Let me know?"
+ },
+ {
+  "id": "w10",
+  "expect": "hold",
+  "issue": {
+   "message": "my post is stuck in-progress"
+  },
+  "reply": "Sorry! Poll the postSubmissionId every 1 second until it changes, and send it to me if it's stuck after an hour. Let me know?"
+ },
+ {
+  "id": "w11",
+  "expect": "hold",
+  "issue": {
+   "message": "Media error 90009"
+  },
+  "reply": "Thanks! A Google Drive share page link is totally okay, so just send the post again. Let me know if it works?"
+ },
+ {
+  "id": "w12",
+  "expect": "hold",
+  "issue": {
+   "message": "my scheduled post went out early"
+  },
+  "reply": "Sorry! Move scheduledTime to the top level, next to post. I promise this will not happen again, and it will be fixed by Friday. Let me know?"
+ },
+ {
+  "id": "w13",
+  "expect": "hold",
+  "issue": {
+   "message": "my post failed to publish"
+  },
+  "reply": "Sorry! Delete your Blotato account and create a new account, then connect everything again. Let me know if that helps?"
+ },
+ {
+  "id": "w14",
+  "expect": "hold",
+  "issue": {
+   "status": 401
+  },
+  "reply": "A 401 means your key is wrong. Copy the key from Settings > API into the blotato-api-key header and resend. Obviously check it first next time."
+ },
+ {
+  "id": "g01",
+  "expect": "send",
+  "issue": {
+   "message": "My scheduled post went out right away"
+  },
+  "reply": "Sorry about that! The schedule setting was in the wrong spot in your request, so it posted right away. Put the time at the top level of the request, next to post, and it will wait. Want me to check your next one?"
+ },
+ {
+  "id": "g02",
+  "expect": "send",
+  "issue": {
+   "status": 401
+  },
+  "reply": "Sorry about that! Copy the key again from Settings > API, including the = at the end, and send it in the blotato-api-key header, not Authorization: Bearer. Does it work now?"
+ },
+ {
+  "id": "g03",
+  "expect": "send",
+  "issue": {
+   "status": 403
+  },
+  "reply": "Thanks for asking! The free trial doesn't include API access; it needs a paid plan like Starter. You can check your plan in Settings > Billing. Want me to walk you through upgrading?"
+ },
+ {
+  "id": "g04",
+  "expect": "send",
+  "issue": {
+   "status": 429,
+   "message": "Rate limit exceeded, retry in 49 seconds"
+  },
+  "reply": "You sent requests a bit faster than Blotato allows, so those were turned away and not posted. Hold off 49 seconds, then send them again, and space out status checks by at least 10 seconds. Did they go through?"
+ },
+ {
+  "id": "g05",
+  "expect": "send",
+  "issue": {
+   "status": 422
+  },
+  "reply": "Your social account's login inside Blotato expired. Connect it again in Settings in the Blotato app, then check Posts > Failed and resend anything that failed meanwhile. Did that work?"
+ },
+ {
+  "id": "g06",
+  "expect": "send",
+  "issue": {
+   "message": "getaddrinfo ENOTFOUND backend.blotato.com"
+  },
+  "reply": "Your request isn't reaching Blotato at all, so your key is probably fine. A VPN, corporate tunnel or firewall is the usual cause. Switch it off or try another Wi-Fi, then send the request again. Did that help?"
+ },
+ {
+  "id": "g07",
+  "expect": "send",
+  "issue": {
+   "message": "calling https://api.blotato.com/v2/posts fails"
+  },
+  "reply": "Quick fix: the API address is https://backend.blotato.com/v2 rather than api.blotato.com. Swap the base address in your tool and send the request again. Did that do it?"
+ },
+ {
+  "id": "g08",
+  "expect": "send",
+  "issue": {
+   "message": "I was charged twice, I want a refund"
+  },
+  "reply": "I'm sorry about the double charge. I'm passing this to our billing team, who can see the payment records. Please reply with your account email and the amount and date on each receipt, and I'll update you here."
+ },
+ {
+  "id": "g09",
+  "expect": "send",
+  "issue": {
+   "message": "Unsupported media type"
+  },
+  "reply": "Blotato couldn't read that file type. Please convert the video to MP4, or use JPG or PNG for images, then upload it again. Want me to check the link if it still fails?"
+ },
+ {
+  "id": "g10",
+  "expect": "send",
+  "issue": {
+   "message": "Media error 90009"
+  },
+  "reply": "Blotato couldn't download the file from that link, usually because it opens a preview page instead of the file. Set Google Drive sharing to Anyone with the link and use the direct download link, or upload the file to Blotato first. Then try again. Want me to convert the link for you?"
+ },
+ {
+  "id": "g11",
+  "expect": "send",
+  "issue": {
+   "message": "my post is stuck in-progress"
+  },
+  "reply": "Let's check: are you using the exact postSubmissionId you got when you created the post? Any ID that doesn't match, or a cancelled schedule, also shows in-progress. If it's the right ID and over an hour old, send it to me and I'll escalate it."
+ },
+ {
+  "id": "g12",
+  "expect": "send",
+  "issue": {
+   "message": "Unrecognized node type: @blotato/n8n-nodes-blotato.blotato"
+  },
+  "reply": "That means the Blotato node isn't installed in your n8n yet. The instance owner installs @blotato/n8n-nodes-blotato under Settings > Community Nodes (on n8n Cloud, turn on Verified Community Nodes first). Then reopen the template. Does the Install button show up?"
+ }
+]

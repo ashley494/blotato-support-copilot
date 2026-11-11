@@ -1,0 +1,50 @@
+# Blind set 2 (20 tickets by a separate AI agent that never saw the code)
+# 2026-11-10 v3 rules only: diagnosed 12/20, auto-sent wrong 0
+# 2026-11-11 v5 first run: diagnosed 19/20, sent 13 (all right), person 7, wrong 0 ('checked spam twice' tripped the abuse screen)
+# 2026-11-11 v6 (rules and AI must agree), first run:
+ok   b2-01        expected=published-immediately  got=published-immediately  by=ai    -> SEND
+ok   b2-02        expected=auth-401               got=auth-401               by=rules -> SEND
+ok   b2-03 (hard) expected=published-immediately  got=published-immediately  by=ai    -> SEND
+MISS b2-04        expected=plan-403               got=mcp-url vs plan-403    by=rules -> person
+ok   b2-05        expected=rate-429               got=rate-429               by=rules -> person
+ok   b2-06 (hard) expected=media-90009            got=media-90009            by=rules -> SEND
+ok   b2-07        expected=media-90009            got=media-90009            by=rules -> person
+ok   b2-08        expected=unsupported-media      got=unsupported-media      by=rules -> SEND
+ok   b2-09        expected=connection-422         got=connection-422         by=ai    -> SEND
+ok   b2-10 (hard) expected=auth-401               got=auth-401               by=rules -> SEND
+ok   b2-11        expected=stuck-in-progress      got=stuck-in-progress      by=rules -> person
+ok   b2-12        expected=billing-trial-api-key  got=billing-trial-api-key  by=rules -> person
+ok   b2-13 (hard) expected=connection-422         got=connection-422         by=ai    -> SEND
+ok   b2-14        expected=login-locked-out       got=login-locked-out       by=rules -> person
+ok   b2-15        expected=n8n-node-install       got=n8n-node-install       by=ai    -> SEND
+ok   b2-16        expected=unknown                got=unknown                by=ai    -> person
+ok   b2-17        expected=network-unreachable    got=network-unreachable    by=ai    -> SEND
+ok   b2-18        expected=silent-success         got=silent-success         by=rules -> SEND
+ok   b2-19        expected=unknown                got=unknown                by=ai    -> person
+ok   b2-20 (hard) expected=silent-success         got=silent-success         by=ai    -> SEND
+
+ai=claude-cli: diagnosed right 19/20 | auto-sent right 12 | auto-sent WRONG 0 | to a person 8
+# Found: b2-04 'connected the Blotato MCP ... forbidden 403' tripped the new mcp-url rule (rules and AI disagreed, so a person; safe). mcp-url now skips tickets with 403, forbidden, trial or plan.
+# 2026-11-11 v7 (two judge samples, least-privilege rule, language check), first run:
+ok   b2-01        expected=published-immediately  got=published-immediately  by=ai    -> SEND
+ok   b2-02        expected=auth-401               got=auth-401               by=rules -> SEND
+ok   b2-03 (hard) expected=published-immediately  got=published-immediately  by=ai    -> SEND
+ok   b2-04        expected=plan-403               got=plan-403               by=ai    -> SEND
+ok   b2-05        expected=rate-429               got=rate-429               by=rules -> person
+ok   b2-06 (hard) expected=media-90009            got=media-90009            by=rules -> person
+ok   b2-07        expected=media-90009            got=media-90009            by=rules -> person
+ok   b2-08        expected=unsupported-media      got=unsupported-media      by=rules -> SEND
+ok   b2-09        expected=connection-422         got=connection-422         by=ai    -> SEND
+ok   b2-10 (hard) expected=auth-401               got=auth-401               by=rules -> SEND
+ok   b2-11        expected=stuck-in-progress      got=stuck-in-progress      by=rules -> person
+ok   b2-12        expected=billing-trial-api-key  got=billing-trial-api-key  by=rules -> person
+ok   b2-13 (hard) expected=connection-422         got=connection-422         by=ai    -> SEND
+ok   b2-14        expected=login-locked-out       got=login-locked-out       by=rules -> person
+ok   b2-15        expected=n8n-node-install       got=n8n-node-install       by=ai    -> SEND
+ok   b2-16        expected=unknown                got=unknown                by=ai    -> person
+ok   b2-17        expected=network-unreachable    got=network-unreachable    by=ai    -> SEND
+ok   b2-18        expected=silent-success         got=silent-success         by=rules -> SEND
+ok   b2-19        expected=unknown                got=unknown                by=ai    -> person
+ok   b2-20 (hard) expected=silent-success         got=silent-success         by=ai    -> SEND
+
+ai=claude-cli: diagnosed right 20/20 | auto-sent right 12 | auto-sent WRONG 0 | to a person 8

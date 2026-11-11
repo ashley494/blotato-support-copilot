@@ -1,0 +1,241 @@
+{
+ "date": "2026-11-11",
+ "judge": "claude-cli",
+ "model": "claude-cli default",
+ "results": [
+  {
+   "id": "g01",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Pattern checks and the AI judge (all 10) passed."
+  },
+  {
+   "id": "g02",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Pattern checks and the AI judge (all 10) passed."
+  },
+  {
+   "id": "g03",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Pattern checks and the AI judge (all 10) passed."
+  },
+  {
+   "id": "g04",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Pattern checks and the AI judge (all 10) passed."
+  },
+  {
+   "id": "g05",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Pattern checks and the AI judge (all 10) passed."
+  },
+  {
+   "id": "g06",
+   "expect": "send",
+   "got": "hold",
+   "ok": false,
+   "patterns": "9/10 -",
+   "judge": "9/10",
+   "why": "AI judge: C2_no_wrong_fix: \"Switch it off\" tells the customer to disable a firewall or VPN, which is turning off a security control rather than allowing the one host."
+  },
+  {
+   "id": "g07",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Pattern checks and the AI judge (all 10) passed."
+  },
+  {
+   "id": "g08",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Pattern checks and the AI judge (all 10) passed."
+  },
+  {
+   "id": "g09",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Pattern checks and the AI judge (all 10) passed."
+  },
+  {
+   "id": "g10",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Pattern checks and the AI judge (all 10) passed."
+  },
+  {
+   "id": "g11",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Pattern checks and the AI judge (all 10) passed."
+  },
+  {
+   "id": "g12",
+   "expect": "send",
+   "got": "send",
+   "ok": true,
+   "patterns": "10/10 -",
+   "judge": "10/10",
+   "why": "Pattern checks and the AI judge (all 10) passed."
+  },
+  {
+   "id": "w01",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "7/10 C1_correct_fix,C2_no_wrong_fix",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w02",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "9/10 C2_no_wrong_fix",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w03",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "8/10 C1_correct_fix,C3_no_false_facts",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w04",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "7/10 C1_correct_fix,C2_no_wrong_fix",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w05",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "6/10 C1_correct_fix,C2_no_wrong_fix",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w06",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "8/10 C2_no_wrong_fix",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w07",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "9/10 C2_no_wrong_fix",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w08",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "8/10 C3_no_false_facts",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w09",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "8/10 C4_no_promises",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w10",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "9/10 C2_no_wrong_fix",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w11",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "8/10 C1_correct_fix,C2_no_wrong_fix",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w12",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "7/10 C1_correct_fix,C4_no_promises",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w13",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "6/10 C1_correct_fix,C2_no_wrong_fix",
+   "judge": "not run",
+   "why": "Known wrong fix, false fact or promise."
+  },
+  {
+   "id": "w14",
+   "expect": "hold",
+   "got": "hold",
+   "ok": true,
+   "patterns": "8/10 -",
+   "judge": "8/10",
+   "why": "AI judge: Q8_no_blame: \"Obviously check it first next time\" is condescending and blames the customer. | Q10_next_step: It ends with the reprimand \"Obviously check it first next time\" rather than a question or a statement"
+  }
+ ]
+}
