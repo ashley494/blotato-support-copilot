@@ -70,3 +70,23 @@ test("publish then status round trip against mock", async () => {
   const ghost = await c.postStatus("does-not-exist");
   assert.equal(ghost.data!.status, "in-progress");
 });
+
+// From the live test on 2026-11-10: DNS failed for the correct host and the old rule blamed api.blotato.com.
+test("explain: network failure on the right host is not a wrong-host error", () => {
+  assert.equal(explainError({ message: "fetch failed ENOTFOUND backend.blotato.com" })[0].id, "network-unreachable");
+  assert.equal(explainError({ message: "fetch failed UNABLE_TO_GET_ISSUER_CERT_LOCALLY" })[0].id, "network-unreachable");
+  assert.equal(explainError({ message: "I'm calling https://api.blotato.com/v2/posts and it fails" })[0].id, "wrong-host");
+  assert.notEqual(explainError({ message: "POST https://backend.blotato.com/v2/posts" })[0].id, "wrong-host");
+});
+
+// The n8n flow embeds a bundle of the copilot. On 2026-11-10 it shipped stale (still the v1 gate) because
+// nobody rebuilt it. This fails whenever n8n/support-triage.json doesn't match the current source.
+test("n8n: committed support-triage.json matches a fresh build of the source", async () => {
+  const { execFileSync } = await import("node:child_process");
+  const { readFileSync, mkdtempSync } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const { join } = await import("node:path");
+  const out = join(mkdtempSync(join(tmpdir(), "n8n-")), "flow.json");
+  execFileSync("node", ["scripts/build-n8n.mjs"], { env: { ...process.env, N8N_OUT: out } });
+  assert.equal(readFileSync(out, "utf8"), readFileSync("n8n/support-triage.json", "utf8"), "run: npm run build:n8n");
+});

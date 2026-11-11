@@ -49,7 +49,7 @@ export async function runDoctor(apiKey: string | undefined, opts: { baseUrl?: st
   try {
     me = await client.me();
   } catch (e: any) {
-    checks.push({ name: "Reach Blotato", status: "fail", detail: String(e?.message ?? e), explanation: explainError({ message: String(e?.cause?.code ?? e?.message ?? e) })[0] });
+    checks.push({ name: "Reach Blotato", status: "fail", detail: String(e?.message ?? e), explanation: explainError({ message: [e?.message, e?.cause?.code, e?.cause?.hostname].filter(Boolean).join(" ") || String(e) })[0] });
     return { checks, accounts: [], healthy: false };
   }
   if (!me.ok) {
@@ -78,7 +78,7 @@ export async function runDoctor(apiKey: string | undefined, opts: { baseUrl?: st
   // Facebook and LinkedIn need a page; an expired connection shows up here as 422.
   for (const a of accounts.filter((x) => x.platform in NEEDS_SUBACCOUNT)) {
     const sub = await client.subaccounts(a.id);
-    const label = `${a.platform} @${a.username ?? a.fullname ?? a.id}`;
+    const label = `${a.platform} ${a.username ? "@" + a.username : a.fullname || a.id}`; // live LinkedIn accounts come back with username ""
     if (!sub.ok) {
       checks.push({ name: `Pages for ${label}`, status: "fail", detail: `HTTP ${sub.status}`, explanation: explainError({ status: sub.status, body: sub.errorBody })[0] });
       continue;
