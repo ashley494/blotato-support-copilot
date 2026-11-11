@@ -11,18 +11,26 @@
     "build": "tsc -p .",
     "test": "npm run build && node --test dist/test/*.test.js",
     "mcp": "node dist/src/mcp.js",
-    "mock": "node dist/src/mock-server.js"
+    "mock": "node dist/src/mock-server.js",
+    "build:n8n": "node scripts/build-n8n.mjs",
+    "n8n:demo": "bash scripts/n8n-demo.sh",
+    "n8n:ticket": "bash scripts/n8n-ticket.sh",
+    "n8n:ticket:bad": "bash scripts/n8n-ticket.sh \"I keep getting 401 errors\" 401 \"Obviously your key is wrong, read the docs.\"",
+    "demo": "npm run build && node dist/src/demo.js",
+    "serve": "npm run build && node dist/src/server.js"
   },
   "engines": {
     "node": ">=20"
   },
   "license": "MIT",
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
     "@modelcontextprotocol/sdk": "^1.17.0",
     "zod": "^3.25.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "esbuild": "^0.24.2",
     "typescript": "^5.6.0"
   }
 }
