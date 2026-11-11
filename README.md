@@ -6,6 +6,8 @@
 - **Run against Blotato's live API on 2026-11-10.** It found 3 bugs in this tool (each fixed, with a test) and 2 things customers get stuck on: a cancelled post reads "in-progress" just like a stuck one, and a published post can't be deleted through the API or MCP. ([live test](docs/live-test.md))
 - **Every score is yes/no checks you can rerun.** No partial credit. ([how scoring works](docs/scoring.md))
 
+**Demo video (2:59):** https://youtu.be/se3OjeOAfcQ
+
 Try it in under 2 minutes, no API key, no network:
 
 ```bash
